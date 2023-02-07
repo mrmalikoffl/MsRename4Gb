@@ -37,14 +37,16 @@ async def start(client,message):
 	try:
 	    id = message.text.split(' ')[1]
 	except:
-	    txt =f"""Hello {wish} {message.from_user.first_name }
-	__I am file renamer bot, Please sent any telegram 
-	**Document Or Video** and enter new filename to rename it__"""
-            await message.reply_photo(photo=MS_PIC,
-                            caption=txt,  
-	                    reply_markup=InlineKeyboardMarkup(
-	                          [[ InlineKeyboardButton("Developer" ,url="https://t.me/mrmalik_offl"), 
-	                          InlineKeyboardButton("Bot Updates 🧐", url="https://t.me/+rN9QCFgIihgyZWM1") ]  ]))
+        txt=f"""Hello {wish} {message.from_user.first_name } \n\n
+	I am **Ms Renamer Bot from tamil nadu**. You can send me file i will rename it with custom thumbnail & caption support - பெருமைக்குரிய தமிழன்!!!"""
+        await message.reply_photo(photo=MS_PIC,
+                                caption=txt,
+                                reply_markup=InlineKeyboardMarkup(
+                                      [[InlineKeyboardButton("🧑🏻‍🦱 Developer 🧑🏻‍🦱", url="https://t.me/mrmalik_offl"),
+                                       InlineKeyboardButton("🚀 Bot Updates 🚀", url='https://t.me/+rN9QCFgIihgyZWM1')],
+                                      [InlineKeyboardButton("📱 My Channel 📱", url='https://t.me/+jXeHXx2s3BFlYzg9'),
+                                       InlineKeyboardButton("💵 For Donation 💵", url='https://te.legra.ph/Payment-01-04')]
+                                      ]))
 	    return
 	if id:
 	    if old == True:
@@ -53,11 +55,14 @@ async def start(client,message):
 	            txt =f"""Hello {wish} {message.from_user.first_name }
 	__I am file renamer bot, Please sent any telegram 
 	**Document Or Video** and enter new filename to rename it__"""
-            await message.reply_photo(photo=MS_PIC,
-                            caption=txt,  
-	                    reply_markup=InlineKeyboardMarkup(
-	                          [[ InlineKeyboardButton("Developer" ,url="https://t.me/mrmalik_offl"), 
-	                          InlineKeyboardButton("Bot Updates 🧐", url="https://t.me/+rN9QCFgIihgyZWM1") ]  ]))
+                    await message.reply_photo(photo=MS_PIC,
+                                         caption=txt,
+                                         reply_markup=InlineKeyboardMarkup(
+                                             [[InlineKeyboardButton("🧑🏻‍🦱 Developer 🧑🏻‍🦱", url="https://t.me/mrmalik_offl"),
+                                       InlineKeyboardButton("🚀 Bot Updates 🚀", url='https://t.me/+rN9QCFgIihgyZWM1')],
+                                      [InlineKeyboardButton("📱 My Channel 📱", url='https://t.me/+jXeHXx2s3BFlYzg9'),
+                                       InlineKeyboardButton("💵 For Donation 💵", url='https://te.legra.ph/Payment-01-04')]
+                                      ]))
 	        except:
 	             return
 	    else:
@@ -66,14 +71,16 @@ async def start(client,message):
 	         limit = _user_["uploadlimit"]
 	         new_limit = limit + 2147483648
 	         uploadlimit(int(id),new_limit)
-	         txt =f"""Hello {wish} {message.from_user.first_name }
-	__I am file renamer bot, Please sent any telegram 
-	**Document Or Video** and enter new filename to rename it__"""
-             await message.reply_photo(photo=MS_PIC,
-                            caption=txt,  
-	                    reply_markup=InlineKeyboardMarkup(
-	                          [[ InlineKeyboardButton("Developer" ,url="https://t.me/mrmalik_offl"), 
-	                          InlineKeyboardButton("Bot Updates 🧐", url="https://t.me/+rN9QCFgIihgyZWM1") ]  ]))
+	         await message.reply_text(text=f"""
+	Hello {wish} {message.from_user.first_name }\n\n
+	__I am **Ms Renamer Bot from tamil nadu**. You can send me file i will rename it with custom thumbnail & caption support - பெருமைக்குரிய தமிழன்!!!__
+	""", reply_to_message_id=message.id,
+                                     reply_markup=InlineKeyboardMarkup(
+                                         [[InlineKeyboardButton("🧑🏻‍🦱 Developer 🧑🏻‍🦱", url="https://t.me/mrmalik_offl"),
+                                       InlineKeyboardButton("🚀 Bot Updates 🚀", url='https://t.me/+rN9QCFgIihgyZWM1')],
+                                      [InlineKeyboardButton("📱 My Channel 📱", url='https://t.me/+jXeHXx2s3BFlYzg9'),
+                                       InlineKeyboardButton("💵 For Donation 💵", url='https://te.legra.ph/Payment-01-04')]
+                                      ]))
 	         
 
 
