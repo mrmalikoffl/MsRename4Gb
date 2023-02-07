@@ -21,16 +21,16 @@ async def warn(c, m):
 @Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["addpremium"]))
 async def buypremium(bot, message):
 	await message.reply_text("Select Plan.........",quote=True,reply_markup=InlineKeyboardMarkup([[ 
-        			InlineKeyboardButton("VIP",callback_data = "vip") ]]))
+        			InlineKeyboardButton("MS PRO",callback_data = "ms pro") ]]))
         			
 
-@Client.on_callback_query(filters.regex('vip'))
-async def vip(bot,update):
+@Client.on_callback_query(filters.regex('ms pro'))
+async def ms pro(bot,update):
 	id = update.message.reply_to_message.text.split("/addpremium")
 	user_id = id[1].replace(" ", "")
 	inlimit  = 10737418240000
 	uploadlimit(int(user_id),10737418240000)
-	usertype(int(user_id),"VIP")
+	usertype(int(user_id),"MS PRO")
 	addpre(int(user_id))
 	await update.message.edit("Added successfully To Premium Users")
-	await bot.send_message(user_id,"Hey Ur Upgraded To VIP check your plan here /myplan")
+	await bot.send_message(user_id,"Hey Ur Upgraded To MS PRO check your plan here /myplan")
