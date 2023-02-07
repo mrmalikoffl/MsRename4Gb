@@ -17,6 +17,7 @@ STRING = os.environ.get("STRING","")
 log_channel = int(os.environ.get("LOG_CHANNEL",""))
 token = os.environ.get('TOKEN','')
 botid = token.split(':')[0]
+MS_PIC = os.environ.get("MS_PIC", "")
 
 #Part of Day --------------------
 currentTime = datetime.datetime.now()
@@ -36,27 +37,31 @@ async def start(client,message):
 	try:
 	    id = message.text.split(' ')[1]
 	except:
-	    await message.reply_text(text =f"""
+	    txt =f"""
 	Hello {wish} {message.from_user.first_name }
 	__I am file renamer bot, Please sent any telegram 
 	**Document Or Video** and enter new filename to rename it__
-	""",reply_to_message_id = message.id ,  
-	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Developer" ,url="https://t.me/mrmalik_offl"), 
-	    InlineKeyboardButton("Bot Updates 🧐", url="https://t.me/+rN9QCFgIihgyZWM1") ]  ]))
+	"""
+        await message.reply_photo(photo=LAZY_PIC,
+                            caption=txt,  
+	                    reply_markup=InlineKeyboardMarkup(
+	                          [[ InlineKeyboardButton("Developer" ,url="https://t.me/mrmalik_offl"), 
+	                          InlineKeyboardButton("Bot Updates 🧐", url="https://t.me/+rN9QCFgIihgyZWM1") ]  ]))
 	    return
 	if id:
 	    if old == True:
 	        try:
 	            await client.send_message(id,"Your Frind Alredy Using Our Bot")
-	            await message.reply_text(text =f"""
+	            txt =f"""
 	Hello {wish} {message.from_user.first_name }
 	__I am file renamer bot, Please sent any telegram 
 	**Document Or Video** and enter new filename to rename it__
-	""",reply_to_message_id = message.id ,  
-	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Developer" ,url="https://t.me/mrmalik_offl"), 
-	    InlineKeyboardButton("Bot Updates 🧐", url="https://t.me/+rN9QCFgIihgyZWM1")]  ]))
+	"""
+        await message.reply_photo(photo=LAZY_PIC,
+                            caption=txt,  
+	                    reply_markup=InlineKeyboardMarkup(
+	                          [[ InlineKeyboardButton("Developer" ,url="https://t.me/mrmalik_offl"), 
+	                          InlineKeyboardButton("Bot Updates 🧐", url="https://t.me/+rN9QCFgIihgyZWM1") ]  ]))
 	        except:
 	             return
 	    else:
@@ -65,14 +70,16 @@ async def start(client,message):
 	         limit = _user_["uploadlimit"]
 	         new_limit = limit + 2147483648
 	         uploadlimit(int(id),new_limit)
-	         await message.reply_text(text =f"""
+	         txt =f"""
 	Hello {wish} {message.from_user.first_name }
 	__I am file renamer bot, Please sent any telegram 
 	**Document Or Video** and enter new filename to rename it__
-	""",reply_to_message_id = message.id ,  
-	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Developer" ,url="https://t.me/mrmalik_offl"), 
-	    InlineKeyboardButton("Bot Updates 🧐", url="https://t.me/+rN9QCFgIihgyZWM1")]  ]))
+	"""
+        await message.reply_photo(photo=LAZY_PIC,
+                            caption=txt,  
+	                    reply_markup=InlineKeyboardMarkup(
+	                          [[ InlineKeyboardButton("Developer" ,url="https://t.me/mrmalik_offl"), 
+	                          InlineKeyboardButton("Bot Updates 🧐", url="https://t.me/+rN9QCFgIihgyZWM1") ]  ]))
 	         
 
 
