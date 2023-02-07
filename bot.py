@@ -24,6 +24,8 @@ bot = Client(
            api_hash=API_HASH,
 
            plugins=dict(root='plugins'))
+
+MS_PIC = os.environ.get("MS_PIC", "")
            
 
 if STRING:
