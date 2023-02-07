@@ -75,7 +75,10 @@ async def start(client,message):
 	reply_markup=InlineKeyboardMarkup(
 	 [[ InlineKeyboardButton("🧑🏻‍🦱 Developer 🧑🏻‍🦱", url="https://t.me/mrmalik_offl"), 
 	 InlineKeyboardButton("🚀 Bot Updates 🚀", url='https://t.me/+rN9QCFgIihgyZWM1') ]  ]))
-	         
+    if MS_PIC:
+        await message.reply_photo(MS_PIC, caption=txt, reply_markup=button)       
+    else:
+        await message.reply_text(text=txt, reply_markup=button, disable_web_page_preview=True)      
 
 
 		
