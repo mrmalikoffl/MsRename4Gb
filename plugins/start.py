@@ -42,7 +42,7 @@ async def start(client,message):
 	__I am file renamer bot, Please sent any telegram 
 	**Document Or Video** and enter new filename to rename it__
 	"""
-        await message.reply_photo(photo=LAZY_PIC,
+        await message.reply_photo(photo=MS_PIC,
                             caption=txt,  
 	                    reply_markup=InlineKeyboardMarkup(
 	                          [[ InlineKeyboardButton("Developer" ,url="https://t.me/mrmalik_offl"), 
@@ -57,7 +57,7 @@ async def start(client,message):
 	__I am file renamer bot, Please sent any telegram 
 	**Document Or Video** and enter new filename to rename it__
 	"""
-        await message.reply_photo(photo=LAZY_PIC,
+        await message.reply_photo(photo=MS_PIC,
                             caption=txt,  
 	                    reply_markup=InlineKeyboardMarkup(
 	                          [[ InlineKeyboardButton("Developer" ,url="https://t.me/mrmalik_offl"), 
@@ -75,7 +75,7 @@ async def start(client,message):
 	__I am file renamer bot, Please sent any telegram 
 	**Document Or Video** and enter new filename to rename it__
 	"""
-        await message.reply_photo(photo=LAZY_PIC,
+        await message.reply_photo(photo=MS_PIC,
                             caption=txt,  
 	                    reply_markup=InlineKeyboardMarkup(
 	                          [[ InlineKeyboardButton("Developer" ,url="https://t.me/mrmalik_offl"), 
