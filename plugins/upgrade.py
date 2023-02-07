@@ -8,7 +8,7 @@ async def upgrade(bot,update):
 	Daily  Upload limit 2GB
 	Price 0
 	
-	**MS PRO** 
+	**VIP** 
 	Daily  Upload  limit unlimited
 	Price Rs 100  🇮🇳/🌎 2$  per Month
 	
@@ -30,7 +30,7 @@ async def upgradecm(bot,message):
 	Daily  Upload limit 2GB
 	Price 0
 	
-	**MS PRO** 
+	**VIP** 
 	Daily  Upload  limit unlimited 
 	Price Rs 100  🇮🇳/🌎 2$  per Month
 	
